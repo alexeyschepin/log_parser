@@ -10,3 +10,7 @@
 4. Render pages ordered by desc
   1. page views
   2. unique page views
+
+
+## TODO
+1. Add validation to LogParser for file format
