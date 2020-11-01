@@ -15,29 +15,29 @@ describe Group do
       ]
     end
 
-    it 'returns a hash with pages as keys and number of views as values' do
-      expect(subject.by_page).to eq(
-        '/help_page/1' => 2,
-        '/contact' => 1
-      )
+    it 'returns a desc sorted array with pages and number of views' do
+      expect(subject.by_page).to eq([
+                                      ['/help_page/1', 2],
+                                      ['/contact', 1]
+                                    ])
     end
   end
 
   describe '#by_page_unique_visitors' do
     let(:logs) do
       [
-        ['/help_page/1', '126.318.035.038'],
         ['/help', '184.123.665.067'],
+        ['/help_page/1', '126.318.035.038'],
         ['/help_page/1', '929.398.951.889'],
         ['/help_page/1', '126.318.035.038']
       ]
     end
 
-    it 'returns a hash with pages as keys and number of unique visitors as values' do
-      expect(subject.by_page).to eq(
-        '/help_page/1' => 2,
-        '/help' => 1
-      )
+    it 'returns a desc sorted array with pages and number of unique visitors' do
+      expect(subject.by_page_unique_visitors).to eq([
+                                                      ['/help_page/1', 2],
+                                                      ['/help', 1]
+                                                    ])
     end
   end
 end
