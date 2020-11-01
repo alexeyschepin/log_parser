@@ -25,3 +25,9 @@ rescue LoadError
   # no rspec available
 end
 task rspec: %w[rspec:unit rspec:integration]
+
+desc 'Run RSpec with coverage'
+task :coverage do
+  ENV['COVERAGE'] = 'true'
+  Rake::Task['rspec'].invoke
+end
