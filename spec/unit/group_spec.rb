@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'spec_helper'
-require 'tempfile'
 
 describe Group do
   subject { described_class.new(logs) }

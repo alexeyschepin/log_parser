@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'spec_helper'
-require 'tempfile'
 
 describe LogParser do
   subject { described_class.perform(file) }
