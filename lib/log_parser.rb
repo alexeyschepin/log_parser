@@ -8,13 +8,7 @@
 module LogParser
   class << self
     def perform(file)
-      File.readlines(file).map { |line| parse_line(line) }
-    end
-
-    private
-
-    def parse_line(line)
-      line.split(' ')
+      File.readlines(file).map { |l| l.split(' ') }
     end
   end
 end
