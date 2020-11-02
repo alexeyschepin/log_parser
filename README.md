@@ -27,4 +27,5 @@ rake rubocop:auto_correct  # Auto-correct RuboCop offenses
 ```
 
 ## TODO
-1. Add validation to LogParser for file format
+1. Fix simplecov. It doesn't show the correct result
+2. Add validation to LogParser for file format
